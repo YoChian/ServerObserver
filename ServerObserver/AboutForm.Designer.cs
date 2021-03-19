@@ -29,61 +29,64 @@ namespace ServerObserver
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.IssueLink = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.VersionLabel = new System.Windows.Forms.Label();
-            this.VersionContent = new System.Windows.Forms.Label();
+            this.InfoLabel = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // linkLabel1
+            // IssueLink
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(107, 21);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(107, 12);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "forum.phaneix.com";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.IssueLink.AutoSize = true;
+            this.IssueLink.Location = new System.Drawing.Point(12, 218);
+            this.IssueLink.Name = "IssueLink";
+            this.IssueLink.Size = new System.Drawing.Size(107, 12);
+            this.IssueLink.TabIndex = 0;
+            this.IssueLink.TabStop = true;
+            this.IssueLink.Text = "forum.phaneix.com";
+            this.IssueLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.IssueLink_LinkClicked);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 206);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 24);
+            this.label1.Size = new System.Drawing.Size(89, 12);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Author:YoChian\r\n问题反馈请到：";
+            this.label1.Text = "问题反馈请到：";
             // 
-            // VersionLabel
+            // InfoLabel
             // 
-            this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Location = new System.Drawing.Point(13, 37);
-            this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(53, 12);
-            this.VersionLabel.TabIndex = 2;
-            this.VersionLabel.Text = "Version:";
+            this.InfoLabel.AutoSize = true;
+            this.InfoLabel.Location = new System.Drawing.Point(3, 0);
+            this.InfoLabel.Name = "InfoLabel";
+            this.InfoLabel.Size = new System.Drawing.Size(53, 12);
+            this.InfoLabel.TabIndex = 2;
+            this.InfoLabel.Text = "Version:";
             // 
-            // VersionContent
+            // flowLayoutPanel1
             // 
-            this.VersionContent.AutoSize = true;
-            this.VersionContent.Location = new System.Drawing.Point(73, 37);
-            this.VersionContent.Name = "VersionContent";
-            this.VersionContent.Size = new System.Drawing.Size(41, 12);
-            this.VersionContent.TabIndex = 3;
-            this.VersionContent.Text = "label2";
+            this.flowLayoutPanel1.Controls.Add(this.InfoLabel);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(304, 203);
+            this.flowLayoutPanel1.TabIndex = 4;
             // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 239);
-            this.Controls.Add(this.VersionContent);
-            this.Controls.Add(this.VersionLabel);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.IssueLink);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.linkLabel1);
             this.Name = "AboutForm";
-            this.Text = "AboutForm";
+            this.Text = "关于";
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,9 +94,9 @@ namespace ServerObserver
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel IssueLink;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label VersionLabel;
-        private System.Windows.Forms.Label VersionContent;
+        private System.Windows.Forms.Label InfoLabel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

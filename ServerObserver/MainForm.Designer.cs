@@ -33,6 +33,7 @@ namespace ServerObserver
             this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.连接信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,6 +41,7 @@ namespace ServerObserver
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.设置ToolStripMenuItem,
+            this.窗口ToolStripMenuItem,
             this.关于ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -52,13 +54,16 @@ namespace ServerObserver
             this.设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.连接信息ToolStripMenuItem});
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
+            this.设置ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
             this.设置ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.设置ToolStripMenuItem.Text = "设置";
             // 
             // 连接信息ToolStripMenuItem
             // 
             this.连接信息ToolStripMenuItem.Name = "连接信息ToolStripMenuItem";
-            this.连接信息ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.连接信息ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.C)));
+            this.连接信息ToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.连接信息ToolStripMenuItem.Text = "连接信息";
             // 
             // 关于ToolStripMenuItem
@@ -67,6 +72,12 @@ namespace ServerObserver
             this.关于ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
+            // 
+            // 窗口ToolStripMenuItem
+            // 
+            this.窗口ToolStripMenuItem.Name = "窗口ToolStripMenuItem";
+            this.窗口ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.窗口ToolStripMenuItem.Text = "窗口";
             // 
             // MainForm
             // 
@@ -90,6 +101,7 @@ namespace ServerObserver
         private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 连接信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 窗口ToolStripMenuItem;
     }
 }
 

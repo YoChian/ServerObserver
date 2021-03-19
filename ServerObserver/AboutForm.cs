@@ -13,6 +13,9 @@ namespace ServerObserver
 {
     public partial class AboutForm : Form
     {
+
+        const string linkadress = "https://github.com/YoChian/ServerObserver/issues";
+
         public AboutForm()
         {
             InitializeComponent();
@@ -21,12 +24,16 @@ namespace ServerObserver
 
         private void CInitialize()
         {
-            VersionContent.Text = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            IssueLink.Text = linkadress;
+            Assembly executingAssembly = Assembly.GetExecutingAssembly();
+            object[] objectAttrs = executingAssembly.GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
+            AssemblyCopyrightAttribute copyrightAttr = (AssemblyCopyrightAttribute)objectAttrs[0];
+            InfoLabel.Text = "";
+            InfoLabel.Text += "Copyright:" + copyrightAttr.Copyright + "\n";
+            InfoLabel.Text += "Version:"+Assembly.GetExecutingAssembly().GetName().Version.ToString()+"\n";
         }
 
-        string linkadress = "http://forum.phaneix.com/";
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void IssueLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(linkadress);
         }
