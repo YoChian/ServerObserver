@@ -4,10 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Reflection;
 
 namespace ServerObserver
 {
@@ -30,7 +30,7 @@ namespace ServerObserver
             AssemblyCopyrightAttribute copyrightAttr = (AssemblyCopyrightAttribute)objectAttrs[0];
             InfoLabel.Text = "";
             InfoLabel.Text += "Copyright:" + copyrightAttr.Copyright + "\n";
-            InfoLabel.Text += "Version:"+Assembly.GetExecutingAssembly().GetName().Version.ToString()+"\n";
+            InfoLabel.Text += "Version:" + Assembly.GetExecutingAssembly().GetName().Version.ToString() + "\n";
         }
 
         private void IssueLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
